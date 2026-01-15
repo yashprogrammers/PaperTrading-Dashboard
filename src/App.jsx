@@ -28,6 +28,7 @@ const App = () => {
               <Route path='/positions' element={<Positions/>}/>
               <Route path='/portfolio' element={<Portfolio/>}/>
               <Route path='/wallet' element={<Wallet/>}/>
+              <Route path='*' element={<NotFound/>}/>
             </Routes>
         </div>
       </div>

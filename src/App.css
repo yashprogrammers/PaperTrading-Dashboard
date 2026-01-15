@@ -6,4 +6,5 @@
     overflow-y: scroll;
     scrollbar-width: none;
     height: 91vh;
-} 
+    padding: 20px;
+}

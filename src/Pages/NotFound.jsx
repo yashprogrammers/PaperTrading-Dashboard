@@ -14,8 +14,8 @@ export default function NotFound() {
 
 const styles = {
   container: {
-    height: "100vh",
-    width: "100vw",
+    height: "100%",
+    width: "100%",
     backgroundColor: "#2f74dc",
     display: "flex",
     flexDirection: "column",

@@ -1,18 +1,18 @@
 import React from 'react'
 import './css/SideBar.css'
+import { Link } from 'react-router-dom'
 
 const SideBar = () => {
   return (
     <aside className="sidebar">
       <div className="menu">
-        <SidebarItem icon="pie_chart" label="Demo" />
-        <SidebarItem icon="view_column" label="Watch List" />
-        <SidebarItem icon="pie_chart" label="Dashboard" active/>
-        <SidebarItem icon="inbox" label="Orders" />
-        <SidebarItem icon="person" label="Holdings" />
-        <SidebarItem icon="lock" label="Positions" />
-        <SidebarItem icon="login" label="Search" />
-        <SidebarItem icon="app_registration" label="Sign Up" />
+        <Link to="/search"><SidebarItem icon="search" label="Search" /></Link>
+        <Link to="/"><SidebarItem icon="pie_chart" label="Dashboard" active/></Link>
+        <Link to="/watchlist"><SidebarItem icon="view_column" label="Watch List" /></Link>
+        <Link to="/orders"><SidebarItem icon="inbox" label="Orders" /></Link>
+        <Link to="/holdings"><SidebarItem icon="person" label="Holdings" /></Link>
+        <Link to="/positions"><SidebarItem icon="lock" label="Positions" /></Link>
+        <Link to="/portfolio"><SidebarItem icon="person" label="Profile" /></Link>
       </div>
 
       <div className="divider" />

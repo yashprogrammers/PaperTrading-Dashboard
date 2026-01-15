@@ -37,10 +37,25 @@
 
 .item:hover {
   background: rgba(108, 108, 108, 0.06);
+
+  .material-icons {
+    color: #2563eb;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .item.active {
-  background: rgba(87, 87, 87, 0.1);
+  /* background: rgba(87, 87, 87, 0.1); */
+  background-color: #2563eb;
+  color: #fff;
+
+  .material-icons {
+    color: #fff;
+  }
 }
 
 .item.active .material-icons,
