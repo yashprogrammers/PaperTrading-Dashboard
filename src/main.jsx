@@ -12,6 +12,7 @@ import Holding from './Pages/Holding.jsx';
 import Positions from './Pages/Positions.jsx';
 import Wallet from './Pages/Wallet.jsx';
 import NotFound from './Pages/NotFound.jsx';
+import Search from './Pages/Search.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')).render(
       <Route path='/holdings' element={<Holding/>} />
       <Route path='/positions' element={<Positions/>} />
       <Route path='/wallet' element={<Wallet/>} />
+      <Route path='/search' element={<Search/>}/>
       <Route path='*' element={<NotFound/>} />
     </Routes>
   </BrowserRouter>
