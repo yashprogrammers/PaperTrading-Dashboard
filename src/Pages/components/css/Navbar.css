@@ -2,8 +2,8 @@
 .navbar {
   height: 64px;
   padding: 0 24px;
+  top: 0%;
   background: ghostwhite;
-  position: fixed;
   width: 100%;
   /* border-bottom: 1px solid #e5e7eb; */
   display: flex;
