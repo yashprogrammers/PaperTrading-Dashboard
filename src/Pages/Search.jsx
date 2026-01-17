@@ -1,157 +1,157 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import StockCard from './components/StockCard'
 import "./css/Search.css"
+import { stocks } from "./components/data"
 
-export const stocks = [
-  {
-    symbol: "NVDA",
-    company: "NVIDIA Corporation",
-    sector: "TECHNOLOGY",
-    exchange: "NASDAQ",
-    price: "912.45",
-    change: "+3.24%",
-    isPositive: true
-  },
-  {
-    symbol: "TSLA",
-    company: "Tesla, Inc.",
-    sector: "CONSUMER CYCLICAL",
-    exchange: "NASDAQ",
-    price: "175.22",
-    change: "-1.12%",
-    isPositive: false
-  },
-  {
-    symbol: "NVDA",
-    company: "NVIDIA Corporation",
-    sector: "TECHNOLOGY",
-    exchange: "NASDAQ",
-    price: "912.45",
-    change: "+3.24%",
-    isPositive: true
-  },
-  {
-    symbol: "TSLA",
-    company: "Tesla, Inc.",
-    sector: "CONSUMER CYCLICAL",
-    exchange: "NASDAQ",
-    price: "175.22",
-    change: "-1.12%",
-    isPositive: false
-  },
-  {
-    symbol: "NVDA",
-    company: "NVIDIA Corporation",
-    sector: "TECHNOLOGY",
-    exchange: "NASDAQ",
-    price: "912.45",
-    change: "+3.24%",
-    isPositive: true
-  },
-  {
-    symbol: "TSLA",
-    company: "Tesla, Inc.",
-    sector: "CONSUMER CYCLICAL",
-    exchange: "NASDAQ",
-    price: "175.22",
-    change: "-1.12%",
-    isPositive: false
-  },
-  {
-    symbol: "NVDA",
-    company: "NVIDIA Corporation",
-    sector: "TECHNOLOGY",
-    exchange: "NASDAQ",
-    price: "912.45",
-    change: "+3.24%",
-    isPositive: true
-  },
-  {
-    symbol: "TSLA",
-    company: "Tesla, Inc.",
-    sector: "CONSUMER CYCLICAL",
-    exchange: "NASDAQ",
-    price: "175.22",
-    change: "-1.12%",
-    isPositive: false
-  },
-  {
-    symbol: "NVDA",
-    company: "NVIDIA Corporation",
-    sector: "TECHNOLOGY",
-    exchange: "NASDAQ",
-    price: "912.45",
-    change: "+3.24%",
-    isPositive: true
-  },
-  {
-    symbol: "TSLA",
-    company: "Tesla, Inc.",
-    sector: "CONSUMER CYCLICAL",
-    exchange: "NASDAQ",
-    price: "175.22",
-    change: "-1.12%",
-    isPositive: false
-  },
-  {
-    symbol: "NVDA",
-    company: "NVIDIA Corporation",
-    sector: "TECHNOLOGY",
-    exchange: "NASDAQ",
-    price: "912.45",
-    change: "+3.24%",
-    isPositive: true
-  },
-  {
-    symbol: "TSLA",
-    company: "Tesla, Inc.",
-    sector: "CONSUMER CYCLICAL",
-    exchange: "NASDAQ",
-    price: "175.22",
-    change: "-1.12%",
-    isPositive: false
-  },
-  {
-    symbol: "NVDA",
-    company: "NVIDIA Corporation",
-    sector: "TECHNOLOGY",
-    exchange: "NASDAQ",
-    price: "912.45",
-    change: "+3.24%",
-    isPositive: true
-  },
-  {
-    symbol: "TSLA",
-    company: "Tesla, Inc.",
-    sector: "CONSUMER CYCLICAL",
-    exchange: "NASDAQ",
-    price: "175.22",
-    change: "-1.12%",
-    isPositive: false
-  },
-  {
-    symbol: "NVDA",
-    company: "NVIDIA Corporation",
-    sector: "TECHNOLOGY",
-    exchange: "NASDAQ",
-    price: "912.45",
-    change: "+3.24%",
-    isPositive: true
-  },
-  {
-    symbol: "TSLA",
-    company: "Tesla, Inc.",
-    sector: "CONSUMER CYCLICAL",
-    exchange: "NASDAQ",
-    price: "175.22",
-    change: "-1.12%",
-    isPositive: false
-  }
-];
-
-
+// export const stock = [
+//   {
+//     symbol: "NVDA",
+//     company: "NVIDIA Corporation",
+//     sector: "TECHNOLOGY",
+//     exchange: "NASDAQ",
+//     price: "912.45",
+//     change: "+3.24%",
+//     isPositive: true
+//   },
+//   {
+//     symbol: "TSLA",
+//     company: "Tesla, Inc.",
+//     sector: "CONSUMER CYCLICAL",
+//     exchange: "NASDAQ",
+//     price: "175.22",
+//     change: "-1.12%",
+//     isPositive: false
+//   },
+//   {
+//     symbol: "NVDA",
+//     company: "NVIDIA Corporation",
+//     sector: "TECHNOLOGY",
+//     exchange: "NASDAQ",
+//     price: "912.45",
+//     change: "+3.24%",
+//     isPositive: true
+//   },
+//   {
+//     symbol: "TSLA",
+//     company: "Tesla, Inc.",
+//     sector: "CONSUMER CYCLICAL",
+//     exchange: "NASDAQ",
+//     price: "175.22",
+//     change: "-1.12%",
+//     isPositive: false
+//   },
+//   {
+//     symbol: "NVDA",
+//     company: "NVIDIA Corporation",
+//     sector: "TECHNOLOGY",
+//     exchange: "NASDAQ",
+//     price: "912.45",
+//     change: "+3.24%",
+//     isPositive: true
+//   },
+//   {
+//     symbol: "TSLA",
+//     company: "Tesla, Inc.",
+//     sector: "CONSUMER CYCLICAL",
+//     exchange: "NASDAQ",
+//     price: "175.22",
+//     change: "-1.12%",
+//     isPositive: false
+//   },
+//   {
+//     symbol: "NVDA",
+//     company: "NVIDIA Corporation",
+//     sector: "TECHNOLOGY",
+//     exchange: "NASDAQ",
+//     price: "912.45",
+//     change: "+3.24%",
+//     isPositive: true
+//   },
+//   {
+//     symbol: "TSLA",
+//     company: "Tesla, Inc.",
+//     sector: "CONSUMER CYCLICAL",
+//     exchange: "NASDAQ",
+//     price: "175.22",
+//     change: "-1.12%",
+//     isPositive: false
+//   },
+//   {
+//     symbol: "NVDA",
+//     company: "NVIDIA Corporation",
+//     sector: "TECHNOLOGY",
+//     exchange: "NASDAQ",
+//     price: "912.45",
+//     change: "+3.24%",
+//     isPositive: true
+//   },
+//   {
+//     symbol: "TSLA",
+//     company: "Tesla, Inc.",
+//     sector: "CONSUMER CYCLICAL",
+//     exchange: "NASDAQ",
+//     price: "175.22",
+//     change: "-1.12%",
+//     isPositive: false
+//   },
+//   {
+//     symbol: "NVDA",
+//     company: "NVIDIA Corporation",
+//     sector: "TECHNOLOGY",
+//     exchange: "NASDAQ",
+//     price: "912.45",
+//     change: "+3.24%",
+//     isPositive: true
+//   },
+//   {
+//     symbol: "TSLA",
+//     company: "Tesla, Inc.",
+//     sector: "CONSUMER CYCLICAL",
+//     exchange: "NASDAQ",
+//     price: "175.22",
+//     change: "-1.12%",
+//     isPositive: false
+//   },
+//   {
+//     symbol: "NVDA",
+//     company: "NVIDIA Corporation",
+//     sector: "TECHNOLOGY",
+//     exchange: "NASDAQ",
+//     price: "912.45",
+//     change: "+3.24%",
+//     isPositive: true
+//   },
+//   {
+//     symbol: "TSLA",
+//     company: "Tesla, Inc.",
+//     sector: "CONSUMER CYCLICAL",
+//     exchange: "NASDAQ",
+//     price: "175.22",
+//     change: "-1.12%",
+//     isPositive: false
+//   },
+//   {
+//     symbol: "NVDA",
+//     company: "NVIDIA Corporation",
+//     sector: "TECHNOLOGY",
+//     exchange: "NASDAQ",
+//     price: "912.45",
+//     change: "+3.24%",
+//     isPositive: true
+//   },
+//   {
+//     symbol: "TSLA",
+//     company: "Tesla, Inc.",
+//     sector: "CONSUMER CYCLICAL",
+//     exchange: "NASDAQ",
+//     price: "175.22",
+//     change: "-1.12%",
+//     isPositive: false
+//   }
+// ];
 
 const Search = () => {
+  
   return (
     <>
       <div className="search-market">
@@ -179,14 +179,14 @@ const Search = () => {
       <div className="card-container">
         {stocks.map((stock) => (
           <StockCard
-            key={stock.symbol}
+            key={stock._id}
             symbol={stock.symbol}
-            company={stock.company}
+            company={stock.name}
             sector={stock.sector}
             exchange={stock.exchange}
-            price={stock.price}
+            price={stock.dayHigh}
             change={stock.change}
-            isPositive={stock.isPositive}
+            isPositive={stock.isActive}
           />
         ))}
       </div>

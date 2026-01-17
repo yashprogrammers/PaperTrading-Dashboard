@@ -1,0 +1,98 @@
+.dashboard {
+  padding: 30px;
+  background: #fafafa;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  font-size: 26px;
+  color: #111827;
+}
+
+.dashboard-header p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.stats {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+
+.stat-card {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  gap: 14px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box span {
+  font-size: 22px;
+}
+
+.icon-box.teal {
+  background: #e6fffa;
+  color: #0f766e;
+}
+
+.icon-box.blue {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.icon-box.green {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.value-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.stat-content h3 {
+  margin: 4px 0 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.stat-content h3.positive {
+  color: #10b981;
+}
+
+.sub {
+  font-size: 13px;
+  color: #10b981;
+}

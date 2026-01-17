@@ -11,6 +11,8 @@ import Order from './Pages/Order'
 import Positions from './Pages/Positions'
 import Wallet from './Pages/Wallet'
 import './App.css'
+import Hero from './Pages/Hero'
+import "./Pages/css/Hero.css"
 
 const App = () => {
   return (
@@ -20,9 +22,9 @@ const App = () => {
         <SideBar />
         <div className="mainBar">
             <Routes>
-              <Route path='/' element={<h1>Hello World!</h1>}/>
+              {/* <Route path='/' element={<Hero/>}/> */}
               <Route path='/search' element={<Search/>}/>
-              <Route path='/watchlist' element={<WatchList/>}/>
+              <Route path='/' element={<WatchList/>}/>
               <Route path='/orders' element={<Order/>}/>
               <Route path='/holdings' element={<Holding/>}/>
               <Route path='/positions' element={<Positions/>}/>
@@ -32,6 +34,7 @@ const App = () => {
             </Routes>
         </div>
       </div>
+      
     </>
   )
 }

@@ -23,7 +23,7 @@ export default function StockCard({
                     </div>
                 </div>
 
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                     info
                 </span>
             </div>
